@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: #3A59F9;
+}
+
+#noise {
+  pointer-events: none;
+  background: url(https://thedial.infura-ipfs.io/ipfs/QmT6qmYPgfQtS1jy5ukANSeaqDCbq8A1ZxXfhfc98EtRVQ);
+  opacity: 0.05;
+  animation: anim 1s steps(2, end) infinite both;
+  transform: translate3d(0, 0, 0);
+}
+
+
+#noise2 {
+  pointer-events: none;
+  background: url(https://thedial.infura-ipfs.io/ipfs/QmT6qmYPgfQtS1jy5ukANSeaqDCbq8A1ZxXfhfc98EtRVQ);
+  opacity: 0.2;
+  animation: anim 1s steps(2, end) infinite both;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes anim {
+  0% {
+    background-position: 0% 0%;
+  }
+  10% {
+    background-position: -25% 25%;
+  }
+  20% {
+    background-position: 30%, -25%;
+  }
+  30% {
+    background-position: -25% 25%;
+  }
+  40% {
+    background-position: 40% -50%;
+  }
+  50% {
+    background-position: 25% 70%;
+  }
+  60% {
+    background-position: 60% 80%;
+  }
+  70% {
+    background-position: 30% 50%;
+  }
+  80% {
+    background-position: 30%, -25%;
+  }
+  90% {
+    background-position: 0% 70%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
