@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Nerd";
+  src: url("/fonts/Nerd.ttf");
+}
+
 html {
   background-color: #3A59F9;
 }

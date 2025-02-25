@@ -9,7 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
-       mar: "#3A59F9"
+        mar: "#3A59F9",
+      },
+      fontFamily: {
+        nerd: "Nerd",
       },
     },
   },
