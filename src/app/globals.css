@@ -11,6 +11,29 @@ html {
   background-color: #3A59F9;
 }
 
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar-track:active {
+  background-color: transparent !important;
+  opacity: 0;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background-color: transparent !important;
+}
+
+
 #noise {
   pointer-events: none;
   background: url(https://thedial.infura-ipfs.io/ipfs/QmT6qmYPgfQtS1jy5ukANSeaqDCbq8A1ZxXfhfc98EtRVQ);
