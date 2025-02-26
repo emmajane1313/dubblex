@@ -3,10 +3,14 @@ import Image from "next/legacy/image";
 import Tren from "./componentes/Tren";
 import { INFURA_GATEWAY } from "@/lib/constantes";
 import Footer from "./componentes/Footer";
-import useMap from "./componentes/useMap";
+import useImagen from "./componentes/useImagen";
+import dynamic from "next/dynamic";
+const Mapa = dynamic(() => import("./componentes/Mapa"), {
+  ssr: false,
+});
 
 export default function Home() {
-  const { map, isFixed, topPosition, imageContainerRef } = useMap();
+  const { isFixed, topPosition, imageContainerRef } = useImagen();
 
   return (
     <div className="relative w-full h-full flex items-center justify-start flex-col overflow-x-hidden">
@@ -142,8 +146,7 @@ export default function Home() {
           ></div>
         </div>
       </div>
-      <div id="map"></div>
-
+      <Mapa />
       <Footer />
       <div
         ref={imageContainerRef}
