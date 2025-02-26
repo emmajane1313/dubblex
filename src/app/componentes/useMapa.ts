@@ -18,6 +18,7 @@ const useMapa = () => {
         zoomOffset: -1,
         minZoom: 1,
         crossOrigin: true,
+        accessToken: process.env.NEXT_PUBLIC_STADIUM,
         attribution:
           '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }
