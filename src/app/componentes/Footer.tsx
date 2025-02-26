@@ -1,12 +1,27 @@
+import { INFURA_GATEWAY } from "@/lib/constantes";
+import Image from "next/legacy/image";
 import { FunctionComponent, JSX } from "react";
 import { FaInstagram } from "react-icons/fa6";
 
 const Footer: FunctionComponent = (): JSX.Element => {
   return (
-    <div className="bg-black flex relative w-full h-fit text-white text-xs px-4 pt-2 pb-8 justify-between flex-row gap-4 items-center">
-      <div className="font-nerd relative w-80 h-fit flex text-left">
-        OG tagger from the Bronx. Survived the Summer of Sam. Bombed the first
-        subway cars. Putting up across the five for over 40 years.
+    <div className="bg-black flex relative w-full h-96 px-4 pt-10 pb-2 justify-between flex-row gap-4 items-end">
+      <div className="font-nerd relative w-fit h-fit flex justify-start items-start flex-col gap-2">
+        <div className="relative w-fit h-fit flex">
+          <div className="relative h-60 w-36 flex">
+            <Image
+              draggable={false}
+              layout="fill"
+              src={`${INFURA_GATEWAY}/ipfs/QmVNFisg6YFXUezjWvxNzVxzCpXir7ZQbYgmjyvPMTF23s`}
+            />
+          </div>
+        </div>
+        <div className="relative w-fit h-fit flex text-left text-white text-xxs">
+          <div className="relative h-fit w-72 break-words flex">
+            OG tagger from the Bronx. Survived the Summer of Sam. Bombed the
+            first subway cars. Putting up across the five for over 40 years.
+          </div>
+        </div>
       </div>
       <FaInstagram
         color="white"

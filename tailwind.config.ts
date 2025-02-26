@@ -14,6 +14,9 @@ export default {
       fontFamily: {
         nerd: "Nerd",
       },
+      fontSize: {
+        xxs: "0.6rem"
+      }
     },
   },
   plugins: [],

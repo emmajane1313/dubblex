@@ -34,6 +34,7 @@ html::-webkit-scrollbar-thumb:active {
 }
 
 
+
 #noise {
   pointer-events: none;
   background: url(https://thedial.infura-ipfs.io/ipfs/QmT6qmYPgfQtS1jy5ukANSeaqDCbq8A1ZxXfhfc98EtRVQ);
@@ -85,4 +86,35 @@ html::-webkit-scrollbar-thumb:active {
   100% {
     background-position: 100% 100%;
   }
+}
+
+
+#scroll {
+  overflow-x: scroll !important;
+  scrollbar-width: auto !important;
+  -ms-overflow-style: auto !important;
+}
+
+#scroll::-webkit-scrollbar {
+  width: 16px !important;
+  display: block !important;
+}
+
+#scroll::-webkit-scrollbar-track {
+  background: white !important;
+  position: relative !important; 
+}
+
+#scroll::-webkit-scrollbar-thumb {
+  background: #3A59F9 !important;
+}
+
+#map {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30rem;
+    margin: 0;
+    padding: 0;
 }
