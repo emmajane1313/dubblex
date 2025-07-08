@@ -13,14 +13,13 @@ const useMapa = () => {
     });
 
     L.tileLayer(
-      `https://tile.jawg.io/jawg-matrix/{z}/{x}/{y}{r}.png?access-token={accessToken}`,
+      `https://tile.jawg.io/jawg-matrix/{z}/{x}/{y}{r}.png?access-token=${process.env.NEXT_PUBLIC_JAWG}`,
       {
         tileSize: 512,
         zoomOffset: -1,
         minZoom: 1,
         crossOrigin: true,
         referrerPolicy: "strict-origin-when-cross-origin",
-        accessToken: process.env.NEXT_PUBLIC_JAWG,
         attribution:
           '<a href="https://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }
