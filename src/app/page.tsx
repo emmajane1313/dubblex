@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/legacy/image";
 import Tren from "./componentes/Tren";
-import { INFURA_GATEWAY } from "@/lib/constantes";
+import { ARTE, INFURA_GATEWAY } from "@/lib/constantes";
 import Footer from "./componentes/Footer";
 import useImagen from "./componentes/useImagen";
 import dynamic from "next/dynamic";
@@ -132,12 +132,30 @@ export default function Home() {
         id="scroll"
       >
         <div className="relative w-fit h-full flex flex-row gap-3 p-4">
-          {Array.from({ length: 10 }).map((arte, indice) => {
+          {ARTE.map((arte, indice) => {
             return (
               <div
                 key={indice}
                 className="relative w-60 h-60 flex rounded-md bg-white"
-              ></div>
+              >
+                {arte?.includes("mp4") ? (
+                  <video
+                    muted
+                    loop
+                    autoPlay
+                    className="object-cover w-full h-full flex"
+                  >
+                    <source src={arte} />
+                  </video>
+                ) : (
+                  <Image
+                    layout="fill"
+                    objectFit="cover"
+                    draggable={false}
+                    src={arte}
+                  />
+                )}
+              </div>
             );
           })}
           <div
